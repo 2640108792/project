@@ -1,0 +1,321 @@
+<?php
+include "background/config.php";
+$admin = false;
+//  启动会话，这步必不可少
+session_start();
+//  判断是否登陆
+$account=$_SESSION["account"];
+$sql="select head,user_name  from t_users where user_account='$account'";
+$smt=$pdo->prepare($sql);
+$smt->execute();
+$row=$smt->fetch();
+$head=$row['head'];
+$nicheng=$row['user_name'];
+
+?>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>东北风光</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="layui/css/layui.css" rel="stylesheet" type="text/css">
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- animation-effect -->
+    <link href="css/animate.min.css" rel="stylesheet">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#footer").load('foot.html');
+        });
+    </script>
+    <!-- //animation-effect -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
+</head>
+
+
+<!-- header -->
+
+<body>
+
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.php">家乡东北</a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                <nav class="cl-effect-13" id="cl-effect-13">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php" class="active">特色美食</a></li>
+                        <li><a href="events.php">文化习俗</a></li>
+                        <li><a href="short-codes.php">自然景观</a></li>
+                        <li><a href="services.php">旅游景点</a></li>
+                        <li><a href="mail.php">联系我们</a></li>
+                        <li><a href="loginRegister.php">登陆注册</a></li>
+                    </ul>
+                </nav>
+                <div class="social-icons">
+                    <ul>
+                        <li><a class="icon-link round facebook" href="http://v.t.sina.com.cn/share/share.php?url=http://www.qhnu.edu.cn &title=点击了解东北风光,美食文化,冰雪之城,欢迎大家前来游玩~" target="_blank"></a></li>
+                        <li><a class="icon-link round p" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.qhnu.edu.cn &title=点击了解东北风光,美食文化,冰雪之城,欢迎大家前来游玩~" target="_blank"></a></li>
+                        <li><a class="icon-link round twitter" href="http://tieba.baidu.com/f/commit/share/openShareApi?url=http://www.qhnu.edu.cn &title=点击了解东北风光,美食文化,冰雪之城,欢迎大家前来游玩~" target="_blank"></a></li>
+                    </ul>
+                    <?php
+                    if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true){
+                   echo "  
+                    <ul class='layui-nav layui-layout-right'>
+                        <li class='layui-nav-item'>
+                            <a href='javascript:;''>
+                                <img src='$head' class='layui-nav-img'>
+                                $nicheng 
+                            </a>
+                            <dl class='layui-nav-child'>
+                                <dd><a href='userHome.php'>基本资料</a></dd>
+                            </dl>
+                        </li>
+                        <li class='layui-nav-item'><a href='loggedOut.php'>退了</a></li>
+                    </ul>";
+                    }else{
+                       echo " 
+                    <ul class='layui-nav layui-layout-right'>
+						<li class='layui-nav-item'>
+							<a href='login.html'>
+								<img src='images/co.png' class='layui-nav-img'>
+                        请登陆
+							</a>
+						</li>
+					</ul>";
+                    }
+                  ?>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+<!-- header -->
+<!-- banner -->
+<div class="banner">
+    <div class="container">
+        <div class="banner-info">
+            <h1 class="animated fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">中国人对食物的感情多半是思乡，是怀旧，是留恋童年的味道.</h1>
+            <div class="banner-info1 animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <ul id="flexiselDemo1">
+                    <li>
+                        <div class="banner-info1-grid">
+                            <img src="images/food1.jpg" alt=" " class="img-responsive" />
+                            <h3>猪肉炖粉条</h3>
+                            <p> 世 界 上 最 治 愈 的 东 西 ,</p>
+                            <p> 第 一 是 美 食 , 第 二 才 是 文 字 .</p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info1-grid">
+                            <img src="images/food2.jpg" alt=" " class="img-responsive" />
+                            <h3>锅包肉</h3>
+                            <p>乡愁就是味觉上的思念，</p>
+                            <p>无论一个人在外闯荡多少年，</p>
+                            <p>即使口音变了，</p>
+                            <p>但对故乡的食物，仍怀无限意念。</p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info1-grid">
+                            <img src="images/food3.jpg" alt=" " class="img-responsive" />
+                            <h3>东北烧烤</h3>
+                            <p>一 个 人 撸 串 , 撸 的 是 心 情 ,</p>
+                            <p>两 个 人 撸 串 ,撸 的 是 默 契 ,</p>
+                            <p>  三 个 人 撸 串 , 撸 的 是 江 湖 . . .</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info1-grid">
+                            <img src="images/food4.jpg" alt=" " class="img-responsive" />
+                            <h3>小鸡炖蘑菇</h3>
+                            <p>中 国 人 善 用 食 物 来 缩 短 他 乡 与 故 乡 的 距 离 .</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info1-grid">
+                            <img src="images/food5.jpg" alt=" " class="img-responsive" />
+                            <h3>红烧肘子</h3>
+                            <p>	人 世 间 , 唯 有 爱 与 美 食 不 可 辜 负 </p>
+                            <p> 爱 已 经 辜 负 的 太 多 了 , 美 食 就 不 能 再 辜 负 了 . </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info1-grid">
+                            <img src="images/food6.jpg" alt=" " class="img-responsive" />
+                            <h3>拔丝地瓜</h3>
+                            <p>在这个时代</p>
+                            <p>每一一个人都经历了太多的苦痛和喜悦</p>
+                            <p>中国人总会将苦涩藏在心里</p>
+                            <p>而把幸福变成食物</p>
+                            <p>呈现在四季的餐桌之上.</p>
+                        </div>
+                    </li>
+                </ul>
+                <script type="text/javascript">
+                    $(window).load(function() {
+                        $("#flexiselDemo1").flexisel({
+                            visibleItems: 3,
+                            animationSpeed: 1000,
+                            autoPlay: true,
+                            autoPlaySpeed: 3000,
+                            pauseOnHover: true,
+                            enableResponsiveBreakpoints: true,
+                            responsiveBreakpoints: {
+                                portrait: {
+                                    changePoint:480,
+                                    visibleItems: 1
+                                },
+                                landscape: {
+                                    changePoint:640,
+                                    visibleItems:2
+                                },
+                                tablet: {
+                                    changePoint:768,
+                                    visibleItems: 2
+                                }
+                            }
+                        });
+
+                    });
+                </script>
+                <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+<div class="banner-bottom">
+    <div class="container">
+        <div class="banner-bottom-grids">
+            <div class="col-md-5 banner-bottom-grid wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h2>黑 龙 江 菜 系</h2>
+                <p>黑龙江地处东北最北端，大小兴安岭的山珍野味，黑龙江的鲑鱼，乌苏里江的大马哈鱼，都为黑龙江的风味菜奠定了物质基础。
+                    黑龙江菜以烹制山珍、河鲜出名，菜肴味重色浓、肥厚实在、较少配料。 著名菜点有清汤飞龙、白扒猴头、红烧鹿筋、熏马哈鱼、
+                    生鱼菜、酱骨架、红肠、松仁小肚、小鸡炖蘑菇、排骨炖豆角、烂炖、酥白肉、汆白肉、杀猪菜、渍菜粉、粘豆包、大楂子饭、山野菜馅饺子等。</p>
+                <div class="more">
+                    <a href="heiIndex.php" class="hvr-curl-bottom-right">了解更多</a>
+                </div>
+            </div>
+            <div class="col-md-7 banner-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="banner-bottom-grid1">
+                    <img src="images/hei.jpg" alt=" " class="img-responsive" />
+                    <div class="banner-bottom-grid-pos">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                <span class="sr-only">30% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress progress1">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                <span class="sr-only">20% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress progress2">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                <span class="sr-only">30% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="newsletter-bottom-grids">
+            <div class="col-md-6 newsletter-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <img src="images/ji.jpg" alt=" " class="img-responsive" />
+            </div>
+            <div class="col-md-6 newsletter-bottom-grid  wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h3> 吉 林 菜 系</h3>
+                <p>吉 林 地 处 东 北 中 部, 巍 巍 长 白 山 ， 茫 茫 林 海 ; 滔 滔 松 花 江 ， 滚 滚 浪 花 ; 一 望 无 际 的 大 草 原 ， 蕴 藏 着 无 尽 的 宝 藏 。
+                    吉 林 菜 善 制 野 味， 醇 厚 香 浓 ， 朴 素 实 惠 。 著 名 菜 点 有 鹿 茸 羹 、 鸡 茸 哈 什 蚂 、 人 参 鸡 、狗 肉 火 锅 、 白 扒 松 茸 蘑 、 白 肉 血 肠 、 鲶 鱼 炖 茄 子 、 猪 肉 炖 粉 条 、 渍 酸 菜 、 朝 鲜 冷 面 、 打 糕 等 。</p>
+                <div class="more">
+                    <a href="jiIndex.php" class="hvr-curl-bottom-right">了解更多</a>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="banner-bottom-grids">
+            <div class="col-md-5 banner-bottom-grid wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <h2> 辽 宁 菜 系</h2>
+                <p>辽 宁 是 满 族 聚 居 的 主 要 省 份 , 因 此 辽 菜 受 满 清 宫 廷 菜 和 王 府 菜 影 响 较 大 , 讲 究 用 料 和 造 型 ,
+                    另 外 辽 菜 还 以 烹 饪 海 鲜 见 长 . 辽 宁 菜 的 特 点 是 注 重 原 汁 原 味 、 咸 甜 分 明 、 酥 烂 香 脆 、 明 油 亮 芡 、
+                    造 型 美 观 . 著 名 的 辽 宁 菜 点 有 烤 明 虾 、 鲜 活 白 蟹 、 蒸 加 吉 鱼 、 红 梅 鱼 肚 、 扒 三 白 、 沈 阳 回 头 、
+                    马 家 烧 麦 、 老 边 饺 子 、 海 城 馅 饼 、 糊 塌 子 等 。</p>
+                <div class="more">
+                    <a href="liaoIndex.php" class="hvr-curl-bottom-right">了解更多</a>
+                </div>
+            </div>
+            <div class="col-md-7 banner-bottom-grid wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="banner-bottom-grid1">
+                    <img src="images/liao.jpg" alt=" " class="img-responsive" />
+                    <div class="banner-bottom-grid-pos">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                <span class="sr-only">30% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress progress1">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                <span class="sr-only">20% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress progress2">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                <span class="sr-only">30% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //banner-bottom -->
+<!-- newsletter -->
+
+<!-- //newsletter-bottom -->
+<!-- footer -->
+<div id="footer"></div>
+<!-- //footer -->
+<!-- for bootstrap working -->
+<script src="js/bootstrap.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+
+<!-- //for bootstrap working -->
+</body>
+</html>

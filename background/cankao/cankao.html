@@ -1,0 +1,300 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
+<%@include file="../../common.jsp"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="shortcut icon" href="<%=staticPath%>favicon.ico" />
+    <!-- base -->
+    <link rel="stylesheet" href="<%=staticPath%>css/base.css">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="<%=staticPath%>css/common/common.css" />
+    <link rel="stylesheet" href="<%=staticPath%>layui/css/layui.css" />
+    <link rel="stylesheet" href="<%=staticPath%>css/unmannedPlane.css" />
+</head>
+<body>
+
+<div class="planeContent">
+    <div class="planeContentBox">
+        <div class="demoTable">
+            <div class="layui-inline inputBg" style="width:210px;">
+                <input class="layui-input" placeholder="请输入编号"  name="id" id="planeId" autocomplete="off">
+            </div>
+            <button class="layui-btn layui-btn-normal" id="searchBtn" data-type="reload">
+                <i class="layui-icon">&#xe615;</i> 搜索
+            </button>
+        </div>
+        <div class="addContent">
+            <button class="layui-btn layui-btn-normal" id="addPlane">
+                <i class="layui-icon">&#xe654;</i>
+                新增
+            </button>
+        </div>
+        <div class="clear"></div>
+        <table class="layui-hide" id="plainListTab" lay-filter="plainListTab"></table>
+        <script type="text/html" id="barDemo">
+            <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+        </script>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="<%=staticPath%>js/jquery.js"></script>
+<script src="<%=staticPath%>layui/layui.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        table.render({
+            elem: '#plainListTab'
+            ,url: "<%=path %>/v1/unmanedPlane/pageQuery"
+            ,cellMinWidth: 100
+            ,cols: [[
+                {field:'id', title: 'ID', align: 'center', sort: true}
+                ,{field:'serialNo', title: '飞机编号', align: 'center'}
+                ,{field:'model', title: '型号', align: 'center'}
+                ,{field:'location', title: '地区', align: 'center'}
+                ,{field:'isTakeScreen', title: '是否带屏', align: 'center', templet: function(d){if(d.isTakeScreen == 1) {return " 带屏";}else {return " 不带屏";}}}
+                ,{field:'planeEnduranceTime', title: '续航时间', align: 'center', templet: function(d) {return d.planeEnduranceTime + " 分钟";}}
+                ,{field:'pixel', title: '相机像素', align: 'center',width:150, templet: function(d) {return d.pixel + " 像素";}}
+                ,{field:'obstacleAvoidanceDistance', title: '避障距离', align: 'center', templet: function(d) {return d.obstacleAvoidanceDistance + " 米";}}
+                ,{field:'flightSpeed', title: '飞行速度', align: 'center',templet:function(d){return d.flightSpeed+" km/h"}}
+                ,{field:'telecontrolEnduranceTime', title: '遥控续航时间', align: 'center',templet:function(d){return d.telecontrolEnduranceTime+" 小时"}}
+                ,{field:'weight', title: '重量', align: 'center',templet:function(d){return d.weight+" g"}}
+                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', align: 'center'}
+            ]]
+            ,id: 'plainListTab'
+            ,page: true
+            ,height: 500
+            ,text: {none: '暂无相关数据'}
+        });
+
+        //编辑，删除
+        table.on('tool(plainListTab)', function(obj) {
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event;//获得lay-event对应的值
+            if(layEvent === 'del') {		//删除
+                layer.confirm('确认删除？', function(index) {
+                    var id = data.id;
+                    $.ajax({
+                        url: "<%=path %>/v1/unmanedPlane/deleteUnmanedPlane/"+id,
+                        type:"POST",
+                        success:function(res) {
+                            obj.del(); //删除对应行的DOM结构
+                            layer.msg("删除成功!");
+                            layer.close(index);
+                            doSearch();
+                            /* plainListTab.reload(); */
+                        },
+                        error:function(error){
+                            layer.msg("删除失败，服务器可能开小差了，请联系管理员!");
+                        }
+                    })
+
+                });
+            }else if(layEvent === 'edit') {
+                var id = data.id;
+                //ajax获取信息加入
+                var editIndex = layer.open({
+                    type: 0 //Page层类型
+                    ,area: ['532px', '714px']
+                    ,title: '编辑无人机 '
+                    ,anim: 0 //0-6的动画形式，-1不开启
+                    ,content: '<div class="divstyle"><span class="star">飞机编号: </span>  <input id="serialNo" class="plane_style" value="'+data.serialNo+'"></div>'
+                    +'<div class="divstyle"><span class="star">型号 :</span>  <input id="model" class="plane_style" value="'+data.model+'"></div>'
+                    +'<div class="divstyle"><span class="star">地区 : </span><input id="location" class="plane_style" value="'+data.location+'"></div>'
+                    +'<div class="divstyle"><span class="star">是否带屏 : </span><select id="isTakeScreen" class="plane_style"><option value="yes">是</option><option value="no">否</option></select></div>'
+                    +'<div class="divstyle"><span class="star">续航时间 : </span><input id="planeEnduranceTime" class="plane_style" value="'+data.planeEnduranceTime+'"></div>'
+                    +'<div class="divstyle"><span class="star">相机像素 : </span><input id="pixel" class="plane_style"  value="'+data.pixel+'"></div>'
+                    +'<div class="divstyle" ><span class="star">避障距离 : </span><input id="obstacleAvoidanceDistance" class="plane_style"  value="'+data.obstacleAvoidanceDistance+'"></div>'
+                    +'<div class="divstyle"><span class="star">飞行速度 : </span> <input id="flightSpeed" class="plane_style"  value="'+data.flightSpeed+'"></div>'
+                    +'<div class="divstyle"><span class="star">续航遥控时间 : </span> <input id="telecontrolEnduranceTime" class="plane_style"  value="'+data.telecontrolEnduranceTime+'"></div>'
+                    +'<div class="divstyle" style="padding-bottom: 20px"><span class="star">重量 : </span> <input id="weight" class="plane_style" value="'+data.weight+'"></div>'
+                    +'<hr>'
+                    ,success: function(layero, index){
+                        if(data.isTakeScreen==1){
+                            $("#isTakeScreen").val("yes");
+                        }
+                        else{
+                            $("#isTakeScreen").val("no");
+                        }
+                    }
+                    ,btn: ['提交', '取消']
+                    ,btn1: function(index, layero){
+                        //提交按钮回调函数
+                        var id=obj.data.id;
+                        var serialNo = $("#serialNo").val();
+                        var model = $("#model").val();
+                        var location = $("#location").val();
+                        var isTakeScreen = $("#isTakeScreen").val();
+                        var planeEnduranceTime = $("#planeEnduranceTime").val();
+                        var pixel = $("#pixel").val();
+                        var obstacleAvoidanceDistance = $("#obstacleAvoidanceDistance").val();
+                        var flightSpeed = $("#flightSpeed").val();
+                        var telecontrolEnduranceTime = $("#telecontrolEnduranceTime").val();
+                        var weight = $("#weight").val();
+                        if(isTakeScreen=="yes"){
+                            isTakeScreen=1;
+                        }
+                        else{
+                            isTakeScreen=0;
+                        }
+                        if (serialNo&&model&&location&&isTakeScreen&&planeEnduranceTime&&pixel&&obstacleAvoidanceDistance&&flightSpeed&&telecontrolEnduranceTime&&weight)
+                        {
+                            $.ajax({
+                                url: "<%=path %>/v1/unmanedPlane/updateUnmanedPlane",
+                                type:"POST",
+                                data : {
+                                    id:id,
+                                    serialNo:serialNo,
+                                    model:model,
+                                    location:location,
+                                    isTakeScreen:isTakeScreen,
+                                    planeEnduranceTime:planeEnduranceTime,
+                                    pixel:pixel,
+                                    obstacleAvoidanceDistance:obstacleAvoidanceDistance,
+                                    flightSpeed:flightSpeed,
+                                    telecontrolEnduranceTime:telecontrolEnduranceTime,
+                                    weight:weight
+                                },
+                                success:function(res) {
+                                    layer.msg("编辑成功!");
+                                    layer.close(index);
+                                    doSearch();
+                                },
+                                error:function(error){
+                                    layer.msg("编辑失败，服务器可能开小差了，请联系管理员!");
+                                }
+                            })
+                        } else{
+                            alert("数据不能为空! ");
+                            return false;
+                        }
+                    }
+                    ,end : function(layero, index){
+                        doSearch();
+                    }
+                })
+            }
+        })
+        //新增
+        $('#addPlane').click(function(){
+            var editIndex = layer.open({
+                type: 0 //Page层类型
+                ,area: ['532px', '714px']
+                ,title: '新增无人机 '
+                ,anim: 0 //0-6的动画形式，-1不开启
+                ,content: '<div class="divstyle"><span class="star">飞机编号: </span>  <input id="serialNo" class="plane_style"></div>'
+                +'<div class="divstyle"><span class="star">型号 :</span>  <input id="model" class="plane_style"></div>'
+                +'<div class="divstyle"><span class="star">地区 : </span><input id="location" class="plane_style"></div>'
+                +'<div class="divstyle"><span class="star">是否带屏 : </span><select id="isTakeScreen" class="plane_style"><option value="yes">是</option><option value="no">否</option></select></div>'
+                +'<div class="divstyle"><span class="star">续航时间 : </span><input id="planeEnduranceTime" class="plane_style"></div>'
+                +'<div class="divstyle"><span class="star">相机像素 : </span><input id="pixel" class="plane_style"></div>'
+                +'<div class="divstyle" ><span class="star">避障距离 : </span><input id="obstacleAvoidanceDistance" class="plane_style"></div>'
+                +'<div class="divstyle"><span class="star">飞行速度 : </span> <input id="flightSpeed" class="plane_style"></div>'
+                +'<div class="divstyle"><span class="star">续航遥控时间 : </span> <input id="telecontrolEnduranceTime" class="plane_style"></div>'
+                +'<div class="divstyle" style="padding-bottom: 20px"><span class="star">重量 : </span> <input id="weight" class="plane_style"></div>'
+                +'<hr>'
+                ,btn: ['提交', '取消']
+                ,yes: function(index, layero){
+                    //提交按钮回调函数
+                    var serialNo = $("#serialNo").val();
+                    var model = $("#model").val();
+                    var location = $("#location").val();
+                    var isTakeScreen = $("#isTakeScreen").val();
+                    var planeEnduranceTime = $("#planeEnduranceTime").val();
+                    var pixel = $("#pixel").val();
+                    var obstacleAvoidanceDistance = $("#obstacleAvoidanceDistance").val();
+                    var flightSpeed = $("#flightSpeed").val();
+                    var telecontrolEnduranceTime = $("#telecontrolEnduranceTime").val();
+                    var weight = $("#weight").val();
+                    if(isTakeScreen=="yes"){
+                        isTakeScreen=1;
+                    }else{
+                        isTakeScreen=0;
+                    }
+                    if (serialNo&&model&&location&&isTakeScreen&&planeEnduranceTime&&pixel&&obstacleAvoidanceDistance&&flightSpeed&&telecontrolEnduranceTime&&weight)
+                    {
+                        $.ajax({
+                            url: "<%=path %>/v1/unmanedPlane/createUnmanedPlane",
+                            type:"POST",
+                            data : {
+                                serialNo:serialNo,
+                                model:model,
+                                location:location,
+                                isTakeScreen:isTakeScreen,
+                                planeEnduranceTime:planeEnduranceTime,
+                                pixel:pixel,
+                                obstacleAvoidanceDistance:obstacleAvoidanceDistance,
+                                flightSpeed:flightSpeed,
+                                telecontrolEnduranceTime:telecontrolEnduranceTime,
+                                weight:weight
+                            },
+                            dataType : "json",
+                            success:function(res) {
+                                layer.msg("新增成功!");
+                                layer.close(index);
+                                doSearch();
+                            },
+                            error:function(error){
+                                layer.msg("新增失败，服务器可能开小差了，请联系管理员!");
+                            }
+                        })
+                    }
+                    else{
+                        alert("数据不得空！	")
+                        return false;
+
+                    }
+
+                }
+            })
+        })
+        //查询按钮点击事件
+        $("#searchBtn").click(function() {
+            var number = $("#planeId").val();
+            if(number==""){
+                doSearch();
+            }else{
+                $.ajax({
+                    url:"<%=path %>/v1/unmanedPlane/pageQuery",
+                    type:"post",
+                    data:{
+                        page: 1,
+                        limit: 10,
+                        serialNo:number,
+                    },
+                    dataType:"json",
+                    success:function(res){
+                        console.log(res);
+                    },
+                    error:function(error){
+                        console.log(error);
+                    }
+                })
+
+            }
+        })
+        // 查询
+        function doSearch() {
+            // 查询条件
+            var planeReload = $('#planeListTab').val();
+            table.reload('plainListTab',{
+                page: {
+                    curr: 1,//从第一页开始
+                },
+                where: {
+                    prizeName:planeReload
+                }
+            })
+        }
+
+    });
+</script>
+</html>
+tml>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="../bs/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="../bs/js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="http://code.changer.hk/jquery/plugins/jquery.cookie.js"></script>-->
+    <!-- bootstrap-table -->
+    <!--<link rel="stylesheet" href="http://code.changer.hk/bootstrap-table/1.6.0/bootstrap-table.min.css">-->
+    <script type="text/javascript" src="../bs/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        #table {
+            padding: 0;
+        }
+        #table>tbody>tr {
+            cursor: pointer;
+        }
+        #table>tbody>tr>td.bs-checkbox {
+            vertical-align: middle;
+        }
+    </style>
+    <style>
+        #user_sex{
+            width: 180px;
+            height: 34px;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #cccccc;
+        }
+        #user_right{
+            width: 180px;
+            height: 34px;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #cccccc;
+        }
+
+
+        .layui-layer-title{
+            background-color: #e5f1ff !important;
+            border-radius: 5px !important;
+            font-size: 16px !important;
+        }
+        .layui-layer{
+            border-radius: 5px !important;
+        }
+        .divstyle{
+            position: relative;
+            padding-top: 18px ;
+            margin-right: 124px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .divstyle1{
+            margin-left: 30px;
+        }
+        #text{
+            margin-top:15px ;
+            width: 350px ;
+            height: 150px;
+            resize:none;
+        }
+
+    </style>
+    <title>黑龙江美食回复</title>
+    <script src="../bootstrap-table-master/src/locale/bootstrap-table-zh-CN.js"></script>
+</head>
+
+<body style="padding: 50px;">
+<div class="toolbar1" style="margin-bottom: -43px;">
+    <button id="remove" class="btn btn-danger" disabled>删除</button>
+    <button class="btn btn-primary" id="byid" data-toggle="modal" data-target="#exampleModal">新建</button>
+</div>
+<div id="table"></div>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<!--<script src="" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="../bootstrap-table-master/src/bootstrap-table.js"></script>
+<!-- Latest compiled and minified Locales -->
+<script src="../bootstrap-table-master/src/locale/bootstrap-table-zh-CN.js"></script>
+
+
+
+<script type="text/javascript">
+    var $table = $('#table'),
+        $remove = $('#remove');
+
+    $(function() {
+        searchData();
+    });
+
+    function prepareDisplayData(data) {
+        return {
+            total: data.data.length,
+            fixedScroll: false,
+            rows: data.data
+        };
+    }
+
+    function searchData() {
+        //定义要调用的地址
+        var search_url = "messageJi.php";
+
+        //url 中问号后面的参数 action，这个对象就是查询的参数
+        //用于后台对执行方法的判断
+        var dataParam = {
+            action: "init_data_list"
+        };
+
+        $.ajax({
+            type: "get",    //数据上传方式
+            url: search_url,  //数据上传地址
+            data: dataParam,  //方法判断
+            dataType: 'json',  //数据类型
+            contentType: 'application/json; charset=utf-8',
+            success: function(data) {
+                //测试是否可以拿到php中的数据
+
+                //遍历这个数组
+                if(data.resultCode == 200) {
+                    var itemArr = data.data;
+                    for(var i = 0; i < itemArr.length; i++) {
+                        var item = itemArr[i];
+
+                    }
+                }
+
+                //bootstrap-table 组织数据
+                var displayData = prepareDisplayData(data);
+                if(displayData.total > 0) {
+                    $('#table').bootstrapTable('load', displayData);
+                } else {
+
+                }
+            },
+            error: function(data) {
+                alert('服务器出错');
+            },
+        });
+    }
+
+    $('#table').bootstrapTable({
+        pagination: true,
+        sidePagination: 'client', //设置为服务器端分页
+        pageNumber: 1,
+        pageSize: 8,
+        pageList: [8, 16, 24, 32],
+        search: true,
+        showColumns: false,
+        showRefresh: true,
+        columns: [{
+            field: 'state',
+            checkbox: true,
+        }, {
+            field: 'id',
+            title: '用户Id',
+            width: '50',
+            align: 'center',
+            valign: 'middle'
+        }, {
+            field: 'user_account',
+            title: '用户名称',
+            width: '500',
+            align: 'center',
+            valign: 'middle'
+        }, {
+            field: 'telephone',
+            title: '手机号',
+            width: '500',
+            align: 'center',
+            valign: 'middle'
+        },{
+            field: 'uemail',
+            title: 'Email邮箱',
+            width: '500',
+            align: 'center',
+            valign: 'middle'
+        },{
+            field: 'utext',
+            title: '留言内容',
+            width: '2000',
+            align: 'center',
+            valign: 'middle'
+        },{
+            field: 'updatetime',
+            title: '留言时间',
+            width: '500',
+            align: 'center',
+            valign: 'middle'
+        },{
+            field: 'user_add',
+            title: '编辑',
+            formatter: forwardFormatter,
+            width: '500',
+            align: 'center',
+            valign: 'middle'
+        }]
+    }).on('page-change.bs.table', function(e, page, size) {
+        fillData();
+    }).on('check.bs.table uncheck.bs.table check-all.bs.table uncheck-all.bs.table', function() {
+        var tes = !$table.bootstrapTable('getSelections').length
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+    });
+    function forwardFormatter(value, row, index) {
+        var data = row
+        var result = "";
+        result += '<a href="javascript:;" class="btn btn-xs blue" onclick="EditViewById('+ data.telephone +',\''+data.user_account+'\',\'' +data.utext+'\',\''+data.uemail+'\',\''+data.id+'\')" title="编辑"><span class="glyphicon glyphicon-pencil"></span></a>';
+
+        return result;
+
+    }
+    //修改
+    function EditViewById(telephone,user_account,utext,uemail,id) {
+        layer.open({
+            type: 0 //Page层类型
+            ,area: ['450px', '410px']
+            ,title: '留言修改 '
+            , anim: 0 //0-6的动画形式，-1不开启
+            , content: '<div class="divstyle"><span style="color: red;">*</span> 姓名 : <input id="user_account" value="' + user_account + '" ></div>'
+            + '<div class="divstyle"><span style="color: red;">*</span> 手机号 : <input id="telephone" value="' + telephone + '"></div>'
+            + '<div class="divstyle" ><span style="color: red;">*</span> 邮箱 : <input id="uemail" value="' + uemail + '"></div>'
+            + '<div class="divstyle1" ><span style="color: red;">*</span> 留言内容 : <input  type="text" id="utext" value="' + utext + '"></div>'
+            + '<hr>'
+            , btn: ['提交', '取消']
+            , btn1: function (index, layero) {
+                //提交按钮回调函数
+                var user_account = $("#user_account").val();
+                var telephone = $("#telephone").val();
+                var email = $("#uemail").val();
+                var text = $("#utext").val();
+                var data = {
+                    user_id:id,
+                    user_account: user_account,
+                    telephone: telephone,
+                    email: email,
+                    text: text
+                }
+                if (user_account &&utext && telephone && uemail) {
+                    console.log(data)
+                    $.ajax({
+                        type: "GET",
+                        url: 'updateMessageJi.php',
+                        data: data,
+                        dataType: 'json',
+                        success: function (res) {
+                            layer.msg("修改成功!");
+                            parent.location.reload();
+                            layer.close(index);
+
+                            doSearch();
+                        },
+                        error: function (error) {
+                            layer.msg("修改失败，服务器可能开小差了，请联系管理员!");
+                        },
+                    });
+                } else {
+                    alert("数据不能为空! ");
+                    return false;
+                }
+            }
+        });
+
+    }
+    //删除
+    $(function() {
+        delData();
+    });
+    function delData() {
+        $remove.on('click', function() {
+            if(confirm("是否继续删除")) {
+                var rows = $.map($table.bootstrapTable('getSelections'), function(row) {
+                    //返回选中的行的索引号
+                    return row.id;
+                });
+            }
+            $.map($table.bootstrapTable('getSelections'),function(row){
+                var del_url = "messageJi.php";
+                //根据userId删除数据,因为这个id就是 传给服务器的参数
+                var rowId = row.id;
+
+                $.ajax({
+                    type:"delete",
+                    url:del_url + "?action=del_row&rowId=" + rowId,
+                    dataType:"html",
+                    contentType: 'application/json;charset=utf-8',
+                    success: function(data) {
+                        $table.bootstrapTable('remove',{
+                            field: 'id',
+                            values: rows
+                        });
+                        $remove.prop('disabled', true);
+                    },
+                    error:function(data){
+                        alert('删除失败！');
+                    }
+                });
+            });
+        })
+    }
+</script>
+<!--新增弹框-->
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use('layer', function() { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+    });
+    //新增的触发事件
+    $("#byid").click(function () {
+        layer.open({
+            type: 0 //Page层类型
+            ,area: ['450px', '610px']
+            ,title: '新增留言 '
+            ,anim: 0 //0-6的动画形式，-1不开启
+            ,content:  '<div class="divstyle"><span style="color: red;">*</span> 姓名 : <input id="user_account"></div>'
+            + '<div class="divstyle"><span style="color: red;">*</span> 手机号 : <input id="telephone"></div>'
+            + '<div class="divstyle" ><span style="color: red;">*</span> 邮箱 : <input id="email"></div>'
+            + '<div class="divstyle1" ><span style="color: red;">*</span> 留言内容 : <textarea  id="text" ></textarea></div>'
+            + '<hr>'
+            ,btn: ['提交', '取消']
+            ,btn1: function(index, layero) {
+                //提交按钮回调函数
+                var user_account = $("#user_account").val();
+                var telephone = $("#telephone").val();
+                var email = $("#email").val();
+                var text = $("#text").val();
+
+                var data={
+                    user_account:user_account,
+                    telephone:telephone,
+                    email:email,
+                    text:text
+                }
+                if (user_account && text && telephone && email) {
+                    console.log(telephone);
+                    $.ajax({
+                        type: "GET",
+                        url: 'addMessageJi.php',
+                        data:data,
+                        dataType: 'json',
+                        success:function(res) {
+                            layer.msg("新增成功!");
+                            parent.location.reload();
+                            layer.close(index);
+                            doSearch();
+                        },
+                        error:function(error){
+                            layer.msg("新增失败，服务器可能开小差了，请联系管理员!");
+                        },
+                    });
+                } else {
+                    alert("数据不能为空! ");
+                    return false;
+                }
+            }
+        });
+    });
+    //修改的触发事件
+
+</script>
+</html>

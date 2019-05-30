@@ -1,0 +1,201 @@
+body{height: 100%;}
+.headerBar{background-color:#000000;height: 80px;}
+/*闁瑰瓨鍨瑰▓鎴﹀绩閹増顥戦柛婊冩湰閸ㄦ粓鎯冮崟顖ｆ殨缂佹拝鎷�*/
+
+.personal-center-poster{height: 400px;width:100%;margin-top:0px;position: relative;z-index: 2;}
+.mainWrap{min-height: 500px;background-color: #f3f3f3;}
+.cr-sec-nav{height: 60px;}
+.reservation-main{padding-bottom:10px;}
+/*婵炶尪顕ф慨鈺傜▔鐠佸磭绉奸梺顔哄妼閸拷*/
+.social_active{
+    width:1200px;
+    margin: 46px auto;
+}
+/*閻犱焦褰冩锟�*/
+.active_lecture{
+    width:1200px;
+    margin: 46px auto;
+    display:none;
+}
+/*婵炶尪顕ф慨鈺呭椽瀹�鍐惧敼閹煎洷鍐ㄥ絾闁稿繘浜堕崕鎾礆閿燂拷*/
+.social_ul li{
+    margin-bottom: 40px;
+    background:#e9e9e9;
+}
+.social_ul li a{
+    display:block;
+}
+
+.social_ul li .social_img{
+    height: 240px;
+    width: 360px;
+    float: left;
+    font-size: 0;
+    text-align:center;
+    line-height:240px;
+}
+.social_ul li .social_img img{
+    max-width: 360px;
+    max-height: 240px;
+}
+.social_ul li .social_intro{
+    width: 800px;
+    height: 240px;
+    float: right;
+    box-sizing:border-box;
+    padding-left:40px;
+}
+.social_ul li .social_intro h3{
+    font-size: 20px;
+    color:#ff6900;
+    margin:21px 0;
+}
+.social_ul li .social_intro h4{
+    font-size:18px;
+    color:#464646;
+    height:40px;
+    line-height: 40px;
+}
+.social_ul li .social_intro p{
+    font-size:15px;
+    color:#717171;
+    height:36px;
+    line-height: 36px;
+}
+.social_ul li .social_intro p span{
+    color:#4bac35;
+    margin-right:25px;
+}
+.social_ul li .social_intro button{
+    height:30px;
+    width: 120px;
+    background:#666666;
+    color:white;
+    font-size:16px;
+    border: none;
+    border-radius: 8px;
+    margin-top:10px;
+    outline:none;
+}
+.social_page{
+    width: 780px;
+    height:50px;
+    line-height: 50px;
+    margin: 50px auto;
+}
+.social_page ul li{
+    float: left;
+    margin:0 25px;
+}
+.collection-reservation-tab{text-align: center; border-bottom:1px solid #e9e9e9;}   
+.collection-reservation-tab ul{display: inline-block;font-size:0;}
+.collection-reservation-tab ul li{
+   display: inline-block;
+    background-size:14px 14px;
+    padding:0 98px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+}
+.collection-reservation-tab  a{
+    font-size: 26px;
+    color:#999999;
+    border-bottom: 4px solid #fff;
+    line-height: 46px;
+    display: inline-block;
+    padding-left:34px;
+}
+.collection-reservation-tab  li.line{width:1px ;height: 26px; background:#e9e9e9; overflow: hidden;padding:0;}
+.collection-reservation-tab li.col >a{
+    background:url(img/collection.png) no-repeat 0 center;  
+}
+.collection-reservation-tab li.col > a:hover,.collection-reservation-tab  li.col a.active{
+    background:url(img/collection-bg.png) no-repeat 0 center;  
+}
+.collection-reservation-tab li.res > a{
+    background:url(img/reservation.png) no-repeat 0 center;  
+}
+.collection-reservation-tab li.res > a:hover,.collection-reservation-tab  li.res a.active{
+    background:url(img/reservation-active.png) no-repeat 0 center;  
+}
+.collection-reservation-tab ul a:hover,.collection-reservation-tab ul a.active{
+    border-bottom: 4px solid #333333; color:#333333;
+}
+
+.colletion-main{padding-top:40px;}
+.collection-reservation-tab .sec-nav{height: 60px;background:#fff;position: absolute;top:101px;left:0;width:420px;font-size: 0;}
+.collection-reservation-tab .sec-nav .sec-li{background:none;height: 60px;line-height: 70px;padding:0 70px;float:left;}
+.collection-reservation-tab .sec-nav a{font-size:15px; color:#333333; line-height: 30px;display: inline-block;border-bottom:1px solid transparent; background: none;padding-left:0;}
+
+.collection-reservation-tab .sec-nav .sec-li a:hover,.collection-reservation-tab .sec-nav  .sec-li a.active{border-bottom:1px solid #000;background:none;}
+.collection-reservation-tab .sec-nav{}
+.collections-collection{display:none;}
+
+
+/*棰勭害寮瑰嚭妗�*/
+.appoint_pop{
+	position:fixed;
+	top:80px;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.9);
+	z-index:999;
+	overflow-y:scroll;
+	display:none;
+}
+.appoint_detail{
+	width:1200px;
+	margin:0 auto;
+	background:#e9e9e9;
+	position:relative;
+	box-sizing:border-box;
+	padding-bottom:60px;
+}
+.appoint_detail ul{
+	box-sizing:border-box;
+	padding:40px 0 0 40px;
+}
+
+.person_infor{
+	margin-left:440px;
+}
+.person_infor p{
+	color:#666666;
+	font-size:16px;
+}
+.person_infor p span{
+	color:#333333;
+	margin-left:30px;
+}
+.Qr_code{
+	margin-top:36px;
+}
+.Qr_code div{
+	float:left;
+}
+.Qr_code .Qr_img{
+	width:200px;
+	height:200px;
+	margin-left:440px;
+}
+.Qr_code div img{
+	width:200px;
+	height:200px;
+}
+.Qr_code div p{
+	font-size:16px;
+	color:#666666;
+	width:316px;
+	margin-left:40px;
+}
+.appoint_close{
+	position:absolute;
+	top:20px;
+	right:20px;
+}
+.appoint_close img{
+	width:20px;
+	height:20px;
+	cursor:pointer;
+}

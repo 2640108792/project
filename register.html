@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>登陆页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css?v=20180206"/>
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <!-- animation-effect -->
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#footer").load('foot.html');
+        });
+    </script>
+    <!-- //animation-effect -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" />
+</head>
+<body>
+<!--头部导航栏-->
+<div class="header">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.html">家乡东北</a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                <nav class="cl-effect-13" id="cl-effect-13">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php" >特色美食</a></li>
+                        <li><a href="events.php">文化习俗</a></li>
+                        <li><a href="short-codes.php">自然景观</a></li>
+                        <li><a href="services.php">旅游景点</a></li>
+                        <li><a href="mail.php">联系我们</a></li>
+                        <li><a href="loginRegister.php" class="active">登陆注册</a></li>
+                    </ul>
+                </nav>
+                <div class="social-icons">
+                    <ul>
+                        <li><a class="icon-link round facebook" href="http://v.t.sina.com.cn/share/share.php?url=http://www.qhnu.edu.cn &title=点击了解东北风光,美食文化,冰雪之城,欢迎大家前来游玩~" target="_blank"></a></li>
+                        <li><a class="icon-link round p" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.qhnu.edu.cn &title=点击了解东北风光,美食文化,冰雪之城,欢迎大家前来游玩~" target="_blank"></a></li>
+                        <li><a class="icon-link round twitter" href="http://tieba.baidu.com/f/commit/share/openShareApi?url=http://www.qhnu.edu.cn &title=点击了解东北风光,美食文化,冰雪之城,欢迎大家前来游玩~" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+<div class="registerheight">
+    <div class="register login_go">
+        <form action="register.php" method="post">
+            <h1>注册</h1>
+            <input type="text" placeholder="请输入账号" id="loginUserName" autocomplete="off" class="input-text" name="username">
+            <input type="password" placeholder="请输入密码" id="loginUserPwd" autocomplete="off"  class="input-text" name="upwd">
+            <input type="password" placeholder="确认密码" id="loginUserPwd2" autocomplete="off"  class="input-text" name="reupwd">
+            <input type="text" placeholder="昵称" id="loginUserPwd3" autocomplete="off"  class="input-text" name="nicheng">
+            <input type="text" placeholder="性别 " id="loginUserPwd4" autocomplete="off"  class="input-text" name="xingbie">
+            <input type="text" placeholder="手机" id="loginUserPwd5" autocomplete="off"  class="input-text" name="shouji">
+            <input type="text" placeholder="邮箱" id="loginUserPwd6" autocomplete="off"  class="input-text" name="youxiang">
+            <input type="submit" class="register-submit" value="提交">
+        </form>
+    </div>
+</div>
+
+<div id="footer"></div>
+</body>
+</html>

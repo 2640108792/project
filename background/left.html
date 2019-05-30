@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧导航</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a class="" href="javascript:;">留言管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="message-hei.html" target="view_frame">黑龙江菜系</a></dd>
+                    <dd><a href="message-ji.html" target="view_frame">吉林菜系</a></dd>
+                    <dd><a href="message-liao.html" target="view_frame">辽宁菜系</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a class="" href="javascript:;">图片管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="imageHei.html" target="view_frame">黑龙江菜系图片</a></dd>
+                    <dd><a href="imageJi.html" target="view_frame">吉林菜系图片</a></dd>
+                    <dd><a href="imageLiao.html" target="view_frame">辽宁菜系图片</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="userManage.html" target="view_frame">用户管理</a>
+            </li>
+            <li class="layui-nav-item"><a href="imageUpload.html"target="view_frame">自然景观</a></li>
+            <li class="layui-nav-item"><a href="contactUs.html" target="view_frame">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="../layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+</body>
+</html>

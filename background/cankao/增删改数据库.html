@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<?php
+
+$pdo = new pdo('mysql:host=localhost; dbname=test','root','123');
+<!--$pdo = new pdo('oci:dbname=//localhost:1521/test','root','123'); 连接oracle数据库-->
+<!--pdo 增添数据-->
+$sql="insert into user(username,password) values('用户名','密码')";
+$pdo->exec($sql);
+<!--将客户端字符集设置为utf-8 -->
+$pdo->exec('set name utf8');
+<!--pdo 删除数据-->
+$sql="delete from user where id=...";
+$pdo->exec($sql);
+<!--批量删除-->
+$sql="delete from user where id=写范围";
+$pdo->exec($sql);
+<!--修改数据   如果相同则返回0 修改失败-->
+$sql="update  user set password='...'  where id=...";
+$pdo->exec($sql);
+
+<!--增添预处理-->
+$sql="insert into user(username,password) values('用户名','密码')";
+$smt=$pdo->prepare($sql);
+if($smt->execute()){
+echo'数据装载成功';
+}else{
+echo'数据装装载失败';
+}
+<!--删除预处理-->
+$sql="delete from user where id=写范围";
+$smt=$pdo->prepare($sql);
+if($smt->execute()){
+<!--返回影响行数-->
+$tot=$smt->rowCount();
+echo'数据装载成功，成功删除'.$tot'行！';
+}else{
+echo'数据装装载失败';
+}
+<!--查询表的行数  第一种方法  效率低-->
+$sql="select * from user";
+$smt=$pdo->prepare($sql);
+if($smt->execute()){
+<!--返回影响行数-->
+$tot=$smt->rowCount();
+echo'查询了'.$tot'行！';
+}else{
+echo'查询失败';
+}
+<!--查询表的行数  第二种方法  效率高-->
+$sql="select count(*) from user";
+$smt->$pdo->prepare($sql);
+$smt->execute();
+<!-- fetchColumn(行,列)      获取第几行的第几列 -->
+$tot=$smt->fetchColumn();
+echo $tot;
+?>

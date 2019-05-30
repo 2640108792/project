@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfbf8c10-79b5-4376-bf2f-02c3203b837f" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/bootstrap-table-master/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="findPwd.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/findPwd.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1932">
+              <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="findPwd.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/findPwd.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>searchBtn</find>
+      <find>addPlane</find>
+      <find>offset</find>
+      <find>active</find>
+      <find>editIndex</find>
+      <find>data.id</find>
+      <find>obj</find>
+      <find>layui-table-view</find>
+      <find>修改</find>
+      <find>id</find>
+      <find>console</find>
+      <find />
+      <find>EditViewById</find>
+      <find>center</find>
+      <find>container</find>
+      <find>footer</find>
+      <find>registerheight</find>
+      <find>register-submit</find>
+      <find>.navbar-nav</find>
+      <find>.layui-layout-right</find>
+      <find>.layui-nav</find>
+      <find>.layui-nav-itemed&gt;.layui-nav-child</find>
+      <find>$admin</find>
+      <find>.tom</find>
+      <find>user_name</find>
+      <find>美食</find>
+      <find>Hei</find>
+      <find>url</find>
+      <find>css</find>
+      <find>zoom</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>user_account</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/background/imageJi.html" />
+        <option value="$PROJECT_DIR$/background/imageHei.html" />
+        <option value="$PROJECT_DIR$/userHome.html" />
+        <option value="$PROJECT_DIR$/ji.php" />
+        <option value="$PROJECT_DIR$/background/content.html" />
+        <option value="$PROJECT_DIR$/short-codes.php" />
+        <option value="$PROJECT_DIR$/services.php" />
+        <option value="$PROJECT_DIR$/mail.php" />
+        <option value="$PROJECT_DIR$/userHome.php" />
+        <option value="$PROJECT_DIR$/updateUserHome.php" />
+        <option value="$PROJECT_DIR$/background/userHome.php" />
+        <option value="$PROJECT_DIR$/background/updateUserHome.php" />
+        <option value="$PROJECT_DIR$/background/addimage.php" />
+        <option value="$PROJECT_DIR$/background/addimagehei.php" />
+        <option value="$PROJECT_DIR$/background/addimageji.php" />
+        <option value="$PROJECT_DIR$/background/addimageliao.php" />
+        <option value="E:/Google下载/jQuery选项卡形式图片瀑布流布局/index.html" />
+        <option value="$PROJECT_DIR$/2.php" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/tourist/tourist1.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist2.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist3.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist4.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist5.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist6.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist7.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist8.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist9.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist10.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist11.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist12.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist13.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist14.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist15.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist16.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist17.html" />
+        <option value="$PROJECT_DIR$/tourist/tourist18.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/register.html" />
+        <option value="$PROJECT_DIR$/forgetPwd.php" />
+        <option value="$PROJECT_DIR$/background/userManage.html" />
+        <option value="$PROJECT_DIR$/background/cankao/qq.vue" />
+        <option value="$PROJECT_DIR$/loginRegister.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/heiIndex.php" />
+        <option value="$PROJECT_DIR$/background/message-hei.html" />
+        <option value="$PROJECT_DIR$/background/imageUpload.html" />
+        <option value="$PROJECT_DIR$/events.php" />
+        <option value="$PROJECT_DIR$/background/index.php" />
+        <option value="$PROJECT_DIR$/findPwd.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6">
+    <include_path>
+      <path value="$PROJECT_DIR$" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <showMembers ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="food" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="background" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="food" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/AppServ/www/food/background/leaveWordes.php" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../study" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\AppServ\www\food\background" />
+      <recent name="E:\AppServ\www\food" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/food/index.html" />
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfbf8c10-79b5-4376-bf2f-02c3203b837f" name="Default Changelist" comment="" />
+      <created>1543823846058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543823846058</updated>
+      <workItem from="1543823847276" duration="6080000" />
+      <workItem from="1543906202226" duration="9292000" />
+      <workItem from="1543979672045" duration="6030000" />
+      <workItem from="1543988238261" duration="11394000" />
+      <workItem from="1544015663163" duration="187000" />
+      <workItem from="1544064583219" duration="12980000" />
+      <workItem from="1544155009477" duration="2754000" />
+      <workItem from="1544249761310" duration="6065000" />
+      <workItem from="1544333501170" duration="5478000" />
+      <workItem from="1544353379925" duration="94000" />
+      <workItem from="1544361505706" duration="4763000" />
+      <workItem from="1544405413025" duration="2186000" />
+      <workItem from="1544408105353" duration="2044000" />
+      <workItem from="1544423630194" duration="7883000" />
+      <workItem from="1544510012432" duration="9525000" />
+      <workItem from="1544671741618" duration="2737000" />
+      <workItem from="1545029069769" duration="6590000" />
+      <workItem from="1545116211207" duration="7041000" />
+      <workItem from="1545219616492" duration="5921000" />
+      <workItem from="1545229492105" duration="153000" />
+      <workItem from="1545284515722" duration="7435000" />
+      <workItem from="1545801887484" duration="3722000" />
+      <workItem from="1545978442993" duration="1131000" />
+      <workItem from="1545979732744" duration="14000" />
+      <workItem from="1546487541111" duration="674000" />
+      <workItem from="1546505002434" duration="345000" />
+      <workItem from="1548156647945" duration="399000" />
+      <workItem from="1550013743985" duration="4491000" />
+      <workItem from="1551327591886" duration="14000" />
+      <workItem from="1551407434583" duration="941000" />
+      <workItem from="1551410048718" duration="631000" />
+      <workItem from="1551660834788" duration="302000" />
+      <workItem from="1551661223273" duration="20653000" />
+      <workItem from="1551748685021" duration="1545000" />
+      <workItem from="1551750274938" duration="165000" />
+      <workItem from="1551835338214" duration="9843000" />
+      <workItem from="1551954638599" duration="1278000" />
+      <workItem from="1551962780171" duration="1576000" />
+      <workItem from="1552109451385" duration="7105000" />
+      <workItem from="1552209916884" duration="5523000" />
+      <workItem from="1552264735642" duration="20896000" />
+      <workItem from="1552291176825" duration="1748000" />
+      <workItem from="1552350822650" duration="26042000" />
+      <workItem from="1552378782998" duration="1280000" />
+      <workItem from="1552393438705" duration="1905000" />
+      <workItem from="1552437200858" duration="20508000" />
+      <workItem from="1552523896403" duration="22325000" />
+      <workItem from="1552554177995" duration="1903000" />
+      <workItem from="1552610123911" duration="15137000" />
+      <workItem from="1552632920096" duration="9444000" />
+      <workItem from="1552807921824" duration="3530000" />
+      <workItem from="1552819775841" duration="787000" />
+      <workItem from="1552820670587" duration="720000" />
+      <workItem from="1552869002288" duration="23480000" />
+      <workItem from="1552955788555" duration="4310000" />
+      <workItem from="1552997174359" duration="622000" />
+      <workItem from="1553159570581" duration="1748000" />
+      <workItem from="1553222003559" duration="2704000" />
+      <workItem from="1553607161166" duration="310000" />
+      <workItem from="1553650408493" duration="1345000" />
+      <workItem from="1553701207338" duration="64000" />
+      <workItem from="1553753836933" duration="4319000" />
+      <workItem from="1553777968588" duration="370000" />
+      <workItem from="1553822239806" duration="20368000" />
+      <workItem from="1554079596492" duration="607000" />
+      <workItem from="1554086185019" duration="807000" />
+      <workItem from="1554097638806" duration="4242000" />
+      <workItem from="1554168212895" duration="1216000" />
+      <workItem from="1554684845027" duration="8975000" />
+      <workItem from="1554701542464" duration="12828000" />
+      <workItem from="1554770102151" duration="14108000" />
+      <workItem from="1554856707962" duration="3529000" />
+      <workItem from="1554862246142" duration="6597000" />
+      <workItem from="1554883554191" duration="3445000" />
+      <workItem from="1554899954046" duration="1185000" />
+      <workItem from="1554943703973" duration="31000" />
+      <workItem from="1554949174668" duration="1274000" />
+      <workItem from="1554959298123" duration="4771000" />
+      <workItem from="1555221398146" duration="612000" />
+      <workItem from="1555512752438" duration="1316000" />
+      <workItem from="1555552296468" duration="2181000" />
+      <workItem from="1555636773930" duration="26000" />
+      <workItem from="1555653120478" duration="2657000" />
+      <workItem from="1555894283357" duration="2821000" />
+      <workItem from="1555921349938" duration="634000" />
+      <workItem from="1555925243087" duration="44000" />
+      <workItem from="1556004836067" duration="2131000" />
+      <workItem from="1556066470025" duration="23000" />
+      <workItem from="1556364766987" duration="643000" />
+      <workItem from="1556365924299" duration="163000" />
+      <workItem from="1556411686092" duration="61000" />
+      <workItem from="1557751818120" duration="5042000" />
+      <workItem from="1557846329760" duration="3000" />
+      <workItem from="1557847198424" duration="1145000" />
+      <workItem from="1557897010518" duration="5820000" />
+      <workItem from="1559022486066" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="451801000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36636245" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.034188036" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32968536" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" weight="0.3294271" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/findPwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1932">
+          <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findPwd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="54" column="68" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist13.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist14.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist16.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist17.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tourist/tourist18.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/personalCenter.html" />
+    <entry file="file://$PROJECT_DIR$/background/imageHei.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/userCenter.html" />
+    <entry file="file://$PROJECT_DIR$/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2156">
+          <caret line="77" column="68" selection-start-line="77" selection-start-column="68" selection-end-line="77" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forgetPwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forgetPwd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/userManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10500">
+          <caret line="375" column="17" selection-start-line="375" selection-start-column="17" selection-end-line="375" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3388">
+          <caret line="121" column="16" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/cankao/qq.vue" />
+    <entry file="file://$PROJECT_DIR$/short-codes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="303" column="30" selection-start-line="303" selection-start-column="30" selection-end-line="303" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heiIndex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6748">
+          <caret line="241" column="9" selection-start-line="241" selection-start-column="9" selection-end-line="241" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/imageUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginRegister.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3052">
+          <caret line="109" column="25" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/imageUpload.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3107">
+          <caret line="5404" column="54" selection-start-line="5404" selection-start-column="53" selection-end-line="5404" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/userHome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1484">
+          <caret line="53" column="53" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/updateMessageLiao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/messageLiao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/message-liao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="284" column="13" selection-start-line="284" selection-start-column="13" selection-end-line="284" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/adduser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-256" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/contactUs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="213" column="9" lean-forward="true" selection-start-line="213" selection-start-column="9" selection-end-line="213" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="56" lean-forward="true" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="26" selection-start-line="26" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background/message-hei.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="222" column="9" selection-start-line="222" selection-start-column="9" selection-end-line="222" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="184" column="1" lean-forward="true" selection-start-line="184" selection-start-column="1" selection-end-line="184" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findPwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1932">
+          <caret line="69" column="46" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/findPwd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
